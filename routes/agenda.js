@@ -8,6 +8,7 @@ router.get('/', function(req, res, next) {
     item.find(function (err, item) {
         if (err) return next(err);
         res.json(item);
+        console.log('yes');
     });
 });
 
