@@ -23,5 +23,21 @@ app.controller("MainController", ['$scope', '$http', function($scope, $http){
         return $http.delete('/agenda/' + id).then(fetchAgenda);
     };
 
+
     fetchAgenda();
+
+
+}]);
+
+
+app.directive('focusThis', ['$timeout', function($timeout) {
+    return {
+        link: function(scope, element, attrs) {
+            element.bind('click', function() {
+                $timeout(function() {
+                    element.parent().parent().find('input')[0].focus();
+                });
+            });
+        }
+    };
 }]);

@@ -3,20 +3,18 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>doing things</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
     <link href="/stylesheets/style.css" rel="stylesheet">
 </head>
 <body ng-controller="MainController">
-<h1>hello</h1>
 <div>
-    <p ng-show="item.name">Your new cats name is: {{ item.name }}</p>
-
     <form ng-submit="add(item)">
-        <input type="text" ng-model="item.name" autofocus/><br />
-        <!--<input type="submit" ng-click="add(item)" value="Save"/>-->
+        <input autofocus type="text" ng-model="item.name"/><br />
     </form>
 
     <ul>
-        <li ng-repeat="item in items" ng-click="delete(item._id)">{{ item.name }}</li>
+        <li focus-this ng-repeat="item in items" ng-click="delete(item._id)" >{{ item.name }}</li>
+        <li class="new" ng-show="item.name">{{ item.name }}</li>
     </ul>
     </div>
 
