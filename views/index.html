@@ -7,16 +7,15 @@
     <link href="/stylesheets/style.css" rel="stylesheet">
 </head>
 <body ng-controller="MainController">
-<div>
+<div class="stuff">
     <form ng-submit="add(item)">
         <input autofocus type="text" ng-model="item.name"/><br />
     </form>
-
     <ul>
         <li focus-this ng-repeat="item in items" ng-click="delete(item._id)" >{{ item.name }}</li>
         <li class="new" ng-show="item.name">{{ item.name }}</li>
     </ul>
-    </div>
+</div>
 
 <script src="/vendor/angular/angular.min.js" type="text/javascript"></script>
 <script src="/javascripts/app.min.js" type="text/javascript"></script>

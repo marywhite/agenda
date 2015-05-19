@@ -6,6 +6,7 @@ input, input:focus {
     border:none;
     font-size:5em;
     word-wrap: break-word;
+    color: #ff4e35;
 }
 
 input:focus, textarea:focus {
@@ -19,11 +20,16 @@ ul {
 }
 
 li {
-    list-style: none;
+    list-style:none;
     padding: 0;
     margin: 0;
 }
 
 .new {
+    color: #ff4e35;
     opacity: .5;
+}
+
+.stuff {
+    margin: 1em;
 }
