@@ -1,0 +1,9 @@
+input, input:focus {
+    border:none;
+    font-size:6em;
+    word-wrap: break-word;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
