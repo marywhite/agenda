@@ -9,10 +9,10 @@
 <body ng-controller="MainController">
 <div class="stuff">
     <form ng-submit="add(item)">
-        <input autofocus type="text" ng-model="item.name"/><br />
+        <input focus-this autofocus type="text" ng-model="item.name"/><br />
     </form>
     <ul>
-        <li focus-this ng-repeat="item in items" ng-click="delete(item._id)" >{{ item.name }}</li>
+        <li ng-repeat="item in items" ng-click="delete(item._id)" >{{ item.name }}</li>
         <li class="new" ng-show="item.name">{{ item.name }}</li>
     </ul>
 </div>

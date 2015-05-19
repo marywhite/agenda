@@ -3,6 +3,7 @@ var app = angular.module('app', []);
 app.controller("MainController", ['$scope', '$http', function($scope, $http){
     $scope.item = {};
     $scope.items = [];
+    $scope.focusField = true;
 
     var fetchAgenda = function() {
         return $http.get('/agenda').then(function(res){
@@ -33,9 +34,9 @@ app.controller("MainController", ['$scope', '$http', function($scope, $http){
 app.directive('focusThis', ['$timeout', function($timeout) {
     return {
         link: function(scope, element, attrs) {
-            element.bind('click', function() {
+            element.bind('blur', function() {
                 $timeout(function() {
-                    element.parent().parent().find('input')[0].focus();
+                    element[0].focus();
                 });
             });
         }
